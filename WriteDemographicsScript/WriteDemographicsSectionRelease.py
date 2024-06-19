@@ -869,7 +869,7 @@ def thing_to_run():
     api_key = input("Please enter your API Key. If you do not have an API key you can go to " +
                     "https://api.census.gov/data/key_signup.html to get one: ")
     place_info = input("Please copy and paste the place info from " +
-                       "https://www.census.gov/library/reference/code-lists/ansi.html place " +
+                       "https://www.census.gov/library/reference/code-lists/ansi.html#place place " +
                        "table row of your relevant city. Make sure it's the place table row" +
                        "And not the Place by County row. Please paste the whole row: ")
     print()
