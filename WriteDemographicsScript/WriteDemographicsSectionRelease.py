@@ -626,7 +626,7 @@ class CensusWriter():
         # poverty status, from my own brain, I think?
         elements.extend(
             [
-                " Out of the ", ParamName("num_with_determined_poverty_status"), " population with a determined ",
+                " Out of the ", ParamName("num_with_determined_poverty_status"), " people with a determined ",
                 "poverty status, ", PercentageOfParam("num_below_poverty_level", "num_with_determined_poverty_status"), "&nbsp;were below the [[poverty line]].",
                 " Further, ", PercentageOfParam("num_minors_below_poverty_level", "num_minors_status_determined"),
                 "&nbsp;of minors and ",
