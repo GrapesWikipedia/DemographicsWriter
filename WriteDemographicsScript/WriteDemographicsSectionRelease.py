@@ -763,8 +763,12 @@ class CensusWriter():
                     # if we're at the end of the list we want an and
                     if index == len(sorted_list_of_per_tuples) - 1:
                         # if there's exactly one element, we don't want an and
-                        if len(sorted_list_of_per_tuples) != 1:
-                            full_string += "and "
+                        if len(sorted_list_of_per_tuples) == 2:
+                            # if there's exactly two elements, we need a space as well cause the comma
+                            # isn't providing the space
+                            full_string += " and "
+                        elif len(sorted_list_of_per_tuples) == 2:
+                            full_string += " and "
 
                     # get the text of our param
                     full_string += str(item[1])
@@ -789,8 +793,12 @@ class CensusWriter():
                     # if we're at the end of the list we want an and
                     if index == len(sorted_list_of_per_tuples) - 1:
                         # don't want an and if there's exactly one item
-                        if len(sorted_list_of_per_tuples) != 1:
-                            full_string += "and "
+                        if len(sorted_list_of_per_tuples) == 2:
+                            # if there's exactly two elements, we need a space as well cause the comma
+                            # isn't providing the space
+                            full_string += " and "
+                        elif len(sorted_list_of_per_tuples) == 2:
+                            full_string += " and "
                     if index == 0:
                         full_string += "People of "
                     # the wiki-linked text of say [[American]]
