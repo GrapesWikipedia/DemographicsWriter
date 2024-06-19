@@ -767,7 +767,7 @@ class CensusWriter():
                             # if there's exactly two elements, we need a space as well cause the comma
                             # isn't providing the space
                             full_string += " and "
-                        elif len(sorted_list_of_per_tuples) == 2:
+                        elif len(sorted_list_of_per_tuples) != 1:
                             full_string += " and "
 
                     # get the text of our param
@@ -797,7 +797,7 @@ class CensusWriter():
                             # if there's exactly two elements, we need a space as well cause the comma
                             # isn't providing the space
                             full_string += " and "
-                        elif len(sorted_list_of_per_tuples) == 2:
+                        elif len(sorted_list_of_per_tuples) != 1:
                             full_string += " and "
                     if index == 0:
                         full_string += "People of "
