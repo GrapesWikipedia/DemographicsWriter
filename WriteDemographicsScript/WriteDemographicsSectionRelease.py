@@ -797,7 +797,7 @@ class CensusWriter():
                     full_string += item[0]
                     # if it's the first we want fancier per Stephens City format
                     if index == 0:
-                        full_string += " descent make up "
+                        full_string += " descent made up "
                     else:
                         full_string += " at "
                     # add the percentage
