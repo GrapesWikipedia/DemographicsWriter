@@ -872,7 +872,7 @@ def thing_to_run():
                        "https://www.census.gov/library/reference/code-lists/ansi.html place " +
                        "table row of your relevant city. Make sure it's the place table row" +
                        "And not the Place by County row. Please paste the whole row: ")
-
+    print()
     print("WE\'RE NOW COOKING UP YOUR DATA, BE A LIL' PATIENT, WOULDJA? It usually takes " +
           "like TEN SECONDS??? USED TO TAKE A MINUTE :-DDD")
     h = CensusWriter(api_key)
