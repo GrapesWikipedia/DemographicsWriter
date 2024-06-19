@@ -768,7 +768,7 @@ class CensusWriter():
                             # isn't providing the space
                             full_string += " and "
                         elif len(sorted_list_of_per_tuples) != 1:
-                            full_string += " and "
+                            full_string += "and "
 
                     # get the text of our param
                     full_string += str(item[1])
@@ -798,7 +798,7 @@ class CensusWriter():
                             # isn't providing the space
                             full_string += " and "
                         elif len(sorted_list_of_per_tuples) != 1:
-                            full_string += " and "
+                            full_string += "and "
                     if index == 0:
                         full_string += "People of "
                     # the wiki-linked text of say [[American]]
