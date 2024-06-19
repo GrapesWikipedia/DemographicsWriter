@@ -540,7 +540,7 @@ class CensusWriter():
                     " The [[population density]] was {{convert|",
                     RatioParam("total_population", "land_area"), "|PD/sqmi|PD/km2|1}}.",
                     " There were ", ParamName("num_housing_units"), " housing units at an average density of ",
-                    "{{convert|", RatioParam("total_population", "num_housing_units"), "|/sqmi|/km2|1}}.",
+                    "{{convert|", RatioParam("num_housing_units", "land_area"), "|/sqmi|/km2|1}}.",
                     PlaceToAddCitation()]
         # QUESTION: some of the races are pretty verbose, should they be shorter, if so to what?
         # QUESTION: should solely some other race be included in the sort, or be at the end?
