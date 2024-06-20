@@ -792,11 +792,10 @@ class CensusWriter():
                 for (index, item) in enumerate(sorted_list_of_per_tuples):
                     # if we're at the end of the list we want an and
                     if index == len(sorted_list_of_per_tuples) - 1:
-                        # don't want an and if there's exactly one item
+                        # with this formatting we don't want an and if there's
+                        # exactly 2 items
                         if len(sorted_list_of_per_tuples) == 2:
-                            # if there's exactly two elements, we need a space as well cause the comma
-                            # isn't providing the space
-                            full_string += " and "
+                            full_string += ""
                         elif len(sorted_list_of_per_tuples) != 1:
                             full_string += "and "
                     if index == 0:
@@ -813,7 +812,10 @@ class CensusWriter():
                     # if we're at the start, introduce what we're taking a percentage of,
                     # and introduce the next item
                     if index == 0:
-                        full_string += "&nbsp;of the population of the town, followed by "
+                        full_string += "&nbsp;of the population of the town"
+                        # we only want this language if there's at least one more ancestry represented
+                        if len(sorted_list_of_per_tuples) > 1:
+                            full_string += ", followed by "
                     # if we're not at the end, we want a comma
                     elif index != len(sorted_list_of_per_tuples) - 1:
                         # if we have more than two items, we need comma separation
