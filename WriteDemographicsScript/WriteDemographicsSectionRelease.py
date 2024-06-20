@@ -609,7 +609,9 @@ class CensusWriter():
                 ), "&nbsp;from 45 to 64, and ",
                 PercentageOfParam("num_65_and_over", "total_population"),
                 "&nbsp;who were 65 or older. The median age was ", ParamName("median_age"),
-                " years.", PlaceToAddCitation()
+                " years.", PlaceToAddCitation(),
+                " For every 100 females, there were ", ParamName("males_per_hundred_females"),
+                " males.", PlaceToAddCitation()
             ]
         )
         # household stuff, also from Stephens City
