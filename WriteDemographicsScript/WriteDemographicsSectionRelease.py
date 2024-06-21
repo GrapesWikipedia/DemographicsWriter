@@ -664,14 +664,14 @@ class CensusWriter():
                         ("[[Scotch-Irish American|Scotch-Irish]]", ParamName("num_scotch-irish")),
                         ("[[Scottish American|Scottish]]", ParamName("num_scottish")),
                         ("[[Slovak American|Slovak]]", ParamName("num_slovak")),
-                        ("[[Sub-Saharan Africa|Sub-Saharan African]]", ParamName("num_subsaharan_african")),
+                        ("[[Sub-Saharan Africa]]n", ParamName("num_subsaharan_african")),
                         ("[[Swedish American|Swedish]]", ParamName("num_swedish")),
                         ("[[Swiss American|Swiss]]", ParamName("num_swiss")),
                         ("[[Ukrainian American|Ukrainian]]", ParamName("num_ukrainian")),
                         ("[[Welsh American|Welsh]]", ParamName("num_welsh")),
                         # west indian is the same thing as Carribean, and that feels like a more
                         # accurate term to use
-                        ("[[Caribbean American|Caribbean (excluding hispanics)]]", ParamName("num_west_indian_(excluding_hispanic_origin_groups)")),
+                        ("[[Caribbean American|Caribbean (excluding Hispanics)]]", ParamName("num_west_indian_(excluding_hispanic_origin_groups)")),
                     ], "total_population"
                 ),
                 ".", PlaceToAddCitation()
