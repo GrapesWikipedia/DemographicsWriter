@@ -197,6 +197,8 @@ class CensusGetter():
             "median_income_household_overall" : DataType("S1901_C01_012E", "subject"),
             "median_income_household_family" : DataType("S1901_C02_012E", "subject"),
             "median_income_household_non_family" : DataType("S1901_C04_012E", "subject"),
+            "median_earnings_full_time_male" : DataType("S2001_C03_013E", "subject"),
+            "median_earnings_full_time_female" : DataType("S2001_C05_013E", "subject"),
             # race
             "num_one_race" : DataType("DP05_0034E", "profile"),
             "num_two_or_more_race" : DataType("DP05_0035E", "profile"),
@@ -285,7 +287,8 @@ class CensusGetter():
             "S0101" : "Age and Sex",
             "S1901" : "Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)",
             "S1701" : "Poverty Status in the Past 12 Months",
-            "S1902" : "Mean Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)"
+            "S1902" : "Mean Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)",
+            "S2001" : "Earnings in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)"
         }
 
     # return a dictionary of all the acs data that seems feasibly relevant, namely
@@ -621,6 +624,16 @@ class CensusWriter():
                 ", with family households having a median income of $", ParamName("median_income_household_family"),
                 " and non-family households $", ParamName("median_income_household_non_family"),
                 ". The [[per capita income]] was $", ParamName("per_capita_income"), ".",
+                PlaceToAddCitation()
+            ]
+        )
+
+        # full time pay by gender
+        elements.extend(
+            [
+                " Males working [[full-time job]]s had median earnings of $",
+                ParamName("median_earnings_full_time_male"), " compared to $",
+                ParamName("median_earnings_full_time_female"), " for females.",
                 PlaceToAddCitation()
             ]
         )
