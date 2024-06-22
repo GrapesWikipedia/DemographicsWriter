@@ -129,7 +129,7 @@ class CensusGetter():
         return "<ref name=" + ref_name +\
                 ">{{cite web|url=" + self.get_link_for_param_acs(param_name) + "| title= "\
                     + self.get_title_for_acs(param_name, ref_name) +\
-                    " | access-date = " + str(date.today()) + " | publisher = " +\
+                    " | access-date = " + str(date.today().strftime("%B %d, %Y")) + " | publisher = " +\
                     "[[United States Census Bureau]]" + "}}</ref>"
 
     # breaking out title getter into seperate function to make it more
